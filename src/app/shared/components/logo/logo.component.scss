@@ -1,0 +1,19 @@
+@use '../../styles/styles.scss'as c;
+
+.logo{
+  background: url('../../../../assets/img/Cats_Logo.svg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.large{
+  width: 80px;
+  height: 80px;
+}
+
+.small{
+  width: 50px;
+  height: 50px;
+}

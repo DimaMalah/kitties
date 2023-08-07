@@ -1,0 +1,13 @@
+<mat-form-field class="form">
+<input
+  matInput [formControl]="breedControl"
+  placeholder="Start typing to chose breed..."
+  [matAutocomplete]="auto"
+  [readonly]="isDisabled"
+ />
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onBreedSelected($event)">
+    <mat-option *ngFor="let breed of filteredBreeds | async" [value]="breed">
+      {{ breed }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

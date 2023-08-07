@@ -1,0 +1,18 @@
+@use './../../shared/styles/styles.scss' as c;
+
+.welcome{
+  &__container{
+    margin: 0 auto;
+    text-align: center;
+    padding: 250px 0;
+  }
+  &__title{
+    color: c.$system_yellow_300;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  &__description{
+    color: c.$system_yellow_300;
+    font-size: 24px;
+  }
+}

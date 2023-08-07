@@ -1,0 +1,43 @@
+<div class="container">
+  <form [formGroup]="catForm">
+    <app-breed-autocomplete (emittedCat)="chosenCat($event)" [breeds]="uniqueBreeds"></app-breed-autocomplete>
+    <button type="button" [disabled]="isLoading" mat-raised-button color="primary" class="button" (click)="chosenCat()">Chose all breeds</button>
+
+    <div class="how-many" *ngIf="catsToRender !== null && catsToRender.length > 10">
+      <mat-form-field class="pagination">
+        <mat-select [(value)]="howManyToShow">
+          <ng-container *ngFor="let item of catsToRender; let i = index" >
+            <mat-option *ngIf="(i + 1) % 5 === 0" [value]="i+1">
+              {{ i + 1 }}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </form>
+
+  <ng-container *ngIf="isLoading">
+    <mat-progress-bar  mode="indeterminate" class="progress-bar" ></mat-progress-bar>
+    <small *ngIf="!(showAdditionalMessage$ | async) && !(showReloadMessage$ | async)" class="small"> Please, wait. It may take some time...</small>
+    <small *ngIf="showAdditionalMessage$ | async" class="small"> Patient will always succeed</small>
+    <small *ngIf="showReloadMessage$ | async" class="small"> unfortunately, server is tired =/ Please, reload page...</small>
+  </ng-container>
+
+  <div class="picture-container">
+
+
+    <ng-container *ngFor="let cat of catsToRender; let i = index" >
+      <div *ngIf="i < howManyToShow" class="cat-item" >
+        <app-cat-picture
+          (click)="showModal(cat.url)"
+          [url]="cat.url"
+          [breed]="cat.breeds[0].name"
+          [description]="cat.breeds[0].description"
+        ></app-cat-picture>
+      </div>
+    </ng-container>
+
+  </div>
+</div>
+

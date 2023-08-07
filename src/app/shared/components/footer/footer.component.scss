@@ -1,0 +1,39 @@
+@use '../../styles/styles.scss' as c;
+
+.footer{
+  min-height: 60px;
+  min-width: 100%;
+  background-color: c.$gray_400;
+  justify-self: flex-end;
+  align-self: flex-end;
+  &__container{
+    max-width: 1200px;
+    width: 1200px;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  &__content-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  &__logo{
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    justify-self: center;
+  }
+  &__contacts{
+    color: c.$gray_200;
+    margin-left: 100px;
+  }
+  &__copyrights{
+    justify-self: flex-end;
+    color: c.$gray_200;
+    margin-left: auto;
+  }
+
+}

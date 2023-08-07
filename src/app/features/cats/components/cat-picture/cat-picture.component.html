@@ -1,0 +1,10 @@
+<mat-card class="cat__card">
+  <mat-card-header>
+    <div mat-card-avatar class="cat__header-image"></div>
+    <mat-card-title>{{breed}}</mat-card-title>
+  </mat-card-header>
+  <img class="cat__img" mat-card-image [src]="url" [alt]="'Photo of a ' + breed">
+  <mat-card-content>
+    <p class="cat__description">{{description}}</p>
+  </mat-card-content>
+</mat-card>

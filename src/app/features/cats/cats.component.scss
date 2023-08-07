@@ -1,0 +1,33 @@
+@use './../../shared/styles/styles.scss' as c;
+
+.container{
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+form{
+  align-self: center;
+}
+.picture-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.button{
+  height: 50px;
+  margin-left: 50px;
+}
+.cat-item{
+  margin-top: 50px;
+
+}
+.pagination{
+  width: 80px;
+}
+.small{
+  color: c.$system_yellow_300;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 50px;
+}

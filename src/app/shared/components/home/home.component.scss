@@ -1,0 +1,14 @@
+@use '../../styles/styles.scss' as c;
+
+
+
+.home{
+  min-height: calc(100vh - c.$footer_height - c.$header_height);
+  min-width: 100%;
+  flex-grow: 1;
+  background-color: c.$Bg_modal_dark;
+  &__container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

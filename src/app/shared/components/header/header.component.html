@@ -1,0 +1,13 @@
+<div class="header">
+  <div class="header__container">
+    <app-logo [routerLink]="['/']"></app-logo>
+    <nav class="header__nav-container">
+      <ul class="header__nav">
+        <li class="header__nav-item" [routerLink]="['/cats']" routerLinkActive='active'><a  class="header__nav-item-link">Cats</a></li>
+        <li class="header__nav-item" [routerLink]="['/dogs']" routerLinkActive='active'><a class="header__nav-item-link" >Dogs</a></li>
+        <li class="header__nav-item" [routerLink]="['/turtles']" routerLinkActive='active'><a  class="header__nav-item-link">Turtles</a></li>
+        <li class="header__nav-item" [routerLink]="['/sharks']" routerLinkActive='active'><a  class="header__nav-item-link">Sharks</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

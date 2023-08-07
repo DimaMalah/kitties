@@ -1,0 +1,42 @@
+@use '../../styles/styles.scss' as c;
+
+.header{
+  min-width: 100%;
+  height: 80px;
+  background-color: c.$gray_400;
+  &__container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__nav-container{
+    min-width: 700px;
+    display: flex;
+  }
+  &__nav{
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  &__nav-item{
+    min-width: 25%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: c.$gray_100;
+    transition: 150ms ease;
+    &:hover{
+      background-color: c.$gray_300;
+      cursor: pointer;
+      color: c.$gray_1000;
+    }
+  }
+}
+
+.active{
+  border-bottom: 2px solid c.$gray_100;
+}

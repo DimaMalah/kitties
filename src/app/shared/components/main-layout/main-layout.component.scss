@@ -1,0 +1,10 @@
+@use '../../styles/styles.scss' as c;
+
+
+.container{
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: c.$gray_100;
+}
